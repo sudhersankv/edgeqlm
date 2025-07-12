@@ -1,0 +1,17 @@
+# Core dependencies
+requests>=2.28.0
+pyperclip>=1.8.2
+psutil>=5.9.0
+
+# Audio dependencies
+pyaudio>=0.2.11
+
+# Transcription dependencies
+openai-whisper>=20231117
+# Alternative: faster-whisper>=0.10.0  # Uncomment for faster processing
+
+# UI dependencies (tkinter is built-in)
+# Note: tkinter comes with Python standard library
+
+# Optional dependencies for future enhancements
+# pystray>=0.19.0  # For system tray support 

@@ -1,0 +1,40 @@
+[
+  {
+    "content": "python main.py",
+    "timestamp": "2025-07-11T22:33:32.013132",
+    "content_type": "command",
+    "summary": null,
+    "labels": [],
+    "size": 14
+  },
+  {
+    "content": "dge computing and ",
+    "timestamp": "2025-07-11T22:33:49.035766",
+    "content_type": "command",
+    "summary": null,
+    "labels": [],
+    "size": 18
+  },
+  {
+    "content": "Not just summarize you can ask it later like hey I what was the video I saw last week spoke about etc",
+    "timestamp": "2025-07-11T22:34:28.059274",
+    "content_type": "command",
+    "summary": null,
+    "labels": [
+      "not",
+      "just",
+      "summarize",
+      "ask",
+      "later"
+    ],
+    "size": 104
+  },
+  {
+    "content": "python qlm.py compile verilog testbench tb_axi\r\n",
+    "timestamp": "2025-07-11T22:35:04.080992",
+    "content_type": "command",
+    "summary": null,
+    "labels": [],
+    "size": 48
+  }
+]

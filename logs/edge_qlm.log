@@ -1,0 +1,29 @@
+2025-07-11 22:33:31,815 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-11 22:33:31,881 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-11 22:33:31,881 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-11 22:33:31,885 - __main__ - INFO - Clipboard manager initialized
+2025-07-11 22:33:31,885 - __main__ - INFO - Audio recorder initialized
+2025-07-11 22:33:31,885 - __main__ - INFO - Background processor initialized
+2025-07-11 22:33:32,013 - __main__ - INFO - UI initialized
+2025-07-11 22:33:32,013 - __main__ - INFO - Starting background services...
+2025-07-11 22:33:32,013 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-11 22:33:32,013 - src.background_processor - INFO - Background processor started
+2025-07-11 22:33:32,013 - __main__ - INFO - All services started successfully
+2025-07-11 22:33:32,013 - __main__ - INFO - Starting UI...
+2025-07-11 22:33:32,026 - src.clipboard_manager - INFO - Added clipboard entry: command (14 bytes)
+2025-07-11 22:33:49,036 - src.clipboard_manager - INFO - Added clipboard entry: command (18 bytes)
+2025-07-11 22:34:28,059 - src.clipboard_manager - INFO - Added clipboard entry: command (104 bytes)
+2025-07-11 22:35:01,107 - __main__ - INFO - Received signal 2, shutting down...
+2025-07-11 22:35:01,107 - __main__ - INFO - Shutting down Edge-QLM...
+2025-07-11 22:35:04,080 - src.clipboard_manager - INFO - Added clipboard entry: command (48 bytes)
+2025-07-11 22:35:06,116 - __main__ - INFO - Received signal 2, shutting down...
+2025-07-11 22:35:06,116 - __main__ - INFO - Shutting down Edge-QLM...
+2025-07-11 22:35:11,124 - src.background_processor - INFO - Background processor stopped
+2025-07-11 22:35:12,085 - src.clipboard_manager - INFO - Clipboard monitoring stopped
+2025-07-11 22:35:12,085 - __main__ - INFO - Shutdown complete
+2025-07-11 22:36:01,979 - src.command_generator - INFO - Started context session: default
+2025-07-11 22:39:32,132 - src.command_generator - INFO - Loaded 1 command sessions
+2025-07-11 22:40:06,576 - src.command_generator - INFO - Loaded 1 command sessions
+2025-07-11 22:40:46,758 - src.command_generator - INFO - Loaded 1 command sessions
+2025-07-11 22:41:32,904 - src.command_generator - INFO - Loaded 1 command sessions
+2025-07-11 22:43:55,319 - src.command_generator - INFO - Loaded 1 command sessions

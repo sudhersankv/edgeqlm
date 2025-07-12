@@ -1,0 +1,33 @@
+{
+  "sessions": {
+    "default": {
+      "session_id": "default",
+      "created_at": "2025-07-11T22:36:01.979332",
+      "last_used": "2025-07-11T22:36:05.392708",
+      "context_entries": [
+        {
+          "timestamp": "2025-07-11T22:36:05.392708",
+          "prompt": "it is not the right command",
+          "generated_command": "It seems that you are trying to run a command but it is not the correct one. Can you please provide more information about the command you are trying to run and what error message you are seeing? This will help me better understand your issue and provide a more accurate response.",
+          "success": true,
+          "working_directory": "D:\\edge-qlm"
+        }
+      ],
+      "working_directory": "D:\\edge-qlm",
+      "environment_info": {
+        "pwd": "D:\\edge-qlm",
+        "platform": "win32",
+        "shell": "C:\\WINDOWS\\system32\\cmd.exe",
+        "user": "kvsud",
+        "path": [
+          "C:\\Users\\kvsud\\anaconda3",
+          "C:\\Users\\kvsud\\anaconda3\\Library\\mingw64\\bin",
+          "C:\\Users\\kvsud\\anaconda3\\Library\\mingw-w64\\bin",
+          "C:\\Users\\kvsud\\anaconda3\\Library\\usr\\bin",
+          "C:\\Users\\kvsud\\anaconda3\\Library\\bin"
+        ]
+      }
+    }
+  },
+  "current_session_id": "default"
+}
