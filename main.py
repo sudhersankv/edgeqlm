@@ -13,6 +13,7 @@ from src.clipboard_manager import ClipboardManager
 from src.audio_recorder import AudioRecorder
 from src.background_processor import BackgroundProcessor
 from src.ui_simple import SimpleEdgeQLMApp
+from filelock import FileLock, Timeout
 
 logger = setup_logger(__name__)
 
@@ -109,9 +110,12 @@ class EdgeQLMApp:
             
             self.running = False
             logger.info("Shutdown complete")
-            
         except Exception as e:
             logger.error(f"Error during shutdown: {e}")
+        finally:
+            # Release instance lock
+            if instance_lock.is_locked:
+                instance_lock.release()
             
     def run(self):
         """Run the main application"""
@@ -192,4 +196,11 @@ def main():
 
 
 if __name__ == "__main__":
+    LOCK_FILE = config.DATA_DIR / "qlm_instance.lock"
+    instance_lock = FileLock(str(LOCK_FILE))
+    try:
+        instance_lock.acquire(timeout=0)
+    except Timeout:
+        print("Another instance of Edge-QLM is already running. Exiting.")
+        sys.exit(0)
     main() 

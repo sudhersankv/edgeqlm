@@ -191,92 +191,71 @@ USER REQUEST: {prompt}"""
         else:
             return f"USER REQUEST: {prompt}"
     
+    def _start_ollama(self):
+        """Attempt to start Ollama server in the background"""
+        try:
+            # Launch ollama serve in a detached process
+            subprocess.Popen(['ollama', 'serve'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            logger.info("Attempting to start Ollama server (ollama serve)...")
+            # Give it a few seconds to start
+            time.sleep(5)
+            return True
+        except FileNotFoundError:
+            logger.error("Ollama executable not found. Please install Ollama from https://ollama.com")
+            return False
+        except Exception as e:
+            logger.error(f"Failed to start Ollama: {e}")
+            return False
+
     def _call_ollama(self, system_prompt: str, user_prompt: str) -> Optional[str]:
-        """Call Ollama API"""
+        """Call Ollama API with auto-start fallback"""
         try:
             url = f"{config.OLLAMA_BASE_URL}/api/generate"
-            
-            # Combine prompts
-            full_prompt = f"{system_prompt}\n\n{user_prompt}"
-            
             payload = {
-                "model": config.OLLAMA_MODEL,
-                "prompt": full_prompt,
-                "stream": False,
-                "options": {
-                    "temperature": 0.1,  # Lower temperature for more consistent commands
-                    "top_p": 0.8,
-                    "max_tokens": 300,   # Shorter responses for commands
-                    "stop": ["#", "```", "Note:", "Explanation:"]  # Stop on explanations
-                }
+                'model': config.OLLAMA_MODEL,
+                'prompt': f"{system_prompt}\n\n{user_prompt}",
+                'stream': False,
+                'temperature': 0.2,
+                'format': 'text'
             }
-            
-            response = requests.post(
-                url,
-                json=payload,
-                timeout=config.OLLAMA_TIMEOUT
-            )
-            
-            if response.status_code == 200:
-                result = response.json()
-                return result.get('response', '').strip()
+            response = requests.post(url, json=payload, timeout=config.OLLAMA_TIMEOUT)
+            response.raise_for_status()
+            data = response.json()
+            return data.get('response')
+        except requests.exceptions.ConnectionError:
+            logger.error("Failed to connect to Ollama. Trying to start the server automatically...")
+            if self._start_ollama():
+                try:
+                    response = requests.post(url, json=payload, timeout=config.OLLAMA_TIMEOUT)
+                    response.raise_for_status()
+                    data = response.json()
+                    return data.get('response')
+                except Exception as e:
+                    logger.error(f"Retry after starting Ollama failed: {e}")
+                    return None
             else:
-                error_msg = f"Ollama API error: {response.status_code}"
-                if response.status_code == 404:
-                    error_msg += " - Model '{config.OLLAMA_MODEL}' not found. Run 'ollama pull {config.OLLAMA_MODEL}'"
-                logger.error(error_msg)
                 return None
-        except requests.ConnectionError:
-            error_msg = "Failed to connect to Ollama. Is Ollama running? Try starting it with 'ollama serve' in a terminal. If not installed, download from ollama.com."
-            logger.error(error_msg)
-            return None
-        except requests.Timeout:
-            logger.error("Ollama request timed out")
-            return None
         except Exception as e:
             logger.error(f"Error calling Ollama: {e}")
             return None
-    
+
     def _clean_command_response(self, response: str) -> str:
-        """Clean and format command response"""
+        """Clean Ollama response to extract raw command(s) only"""
         if not response:
-            return "# Error: Empty response"
-        
-        # Remove explanations and comments
-        lines = response.split('\n')
-        command_lines = []
-        
+            return ""
+        lines = response.strip().split('\n')
+        cleaned = []
         for line in lines:
             line = line.strip()
-            
-            # Skip empty lines and comments
-            if not line or line.startswith('#') or line.startswith('//'):
+            # Skip empty lines or lines that look like explanations or markdown
+            if not line:
                 continue
-            
-            # Skip explanatory text
-            if any(word in line.lower() for word in ['explanation:', 'note:', 'here', 'this will', 'the command']):
+            if line.startswith('#') or line.startswith('>') or line.lower().startswith('note'):
                 continue
-            
-            # Remove common prefixes
-            for prefix in ['$ ', '> ', 'PS> ', 'C:\\>', 'Command: ', 'command: ']:
-                if line.startswith(prefix):
-                    line = line[len(prefix):].strip()
-            
-            # Remove markdown code blocks
-            if line.startswith('```') or line.endswith('```'):
-                continue
-            
-            if line:
-                command_lines.append(line)
-        
-        # Join commands
-        result = '\n'.join(command_lines)
-        
-        # If no valid commands found, return original response
-        if not result.strip():
-            return response.strip()
-        
-        return result
+            # Remove backticks or code fences
+            line = line.strip('`')
+            cleaned.append(line)
+        return '\n'.join(cleaned)
     
     def test_connection(self) -> bool:
         """Test Ollama connection"""
@@ -286,6 +265,22 @@ USER REQUEST: {prompt}"""
             return response.status_code == 200
         except:
             return False
+
+
+# Helper for consistent output and clipboard copy
+
+def main_output(command: str, copy_to_clipboard: bool = True):
+    """Wrap command in $$ for terminal display and copy raw command to clipboard."""
+    if not command:
+        print("# Error: Empty command")
+        return
+    wrapped = f"$${command}$$"
+    print(wrapped)
+    if copy_to_clipboard:
+        try:
+            pyperclip.copy(command)
+        except Exception:
+            pass
 
 
 def main():
@@ -390,19 +385,8 @@ Examples:
     
     # Generate command
     command = generator.generate_command(prompt, use_context=args.context)
-    
-    # Copy to clipboard
-    if not args.no_copy:
-        try:
-            pyperclip.copy(command)
-            print("Generated command (copied to clipboard):")
-        except Exception:
-            print("Generated command (copy failed):")
-    else:
-        print("Generated command:")
-    
-    # Output the command
-    print(f"$${command}$$")
+    # Output the command (and copy unless disabled)
+    main_output(command, copy_to_clipboard=not args.no_copy)
 
 
 if __name__ == "__main__":

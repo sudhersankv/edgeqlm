@@ -406,3 +406,119 @@
 2025-07-13 20:29:37,614 - src.audio_recorder - INFO - File size: 231468 bytes
 2025-07-13 20:29:39,059 - src.audio_recorder - INFO - Transcription successful: 95 characters
 2025-07-13 20:29:39,060 - src.audio_recorder - INFO - Transcribed recording: recording_20250713_202929.wav
+2025-07-13 20:46:03,269 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:46:07,378 - src.command_generator_improved - ERROR - Failed to connect to Ollama. Is Ollama running? Try starting it with 'ollama serve' in a terminal. If not installed, download from ollama.com.
+2025-07-13 20:46:07,580 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 20:46:07,751 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 20:46:07,803 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 20:46:08,107 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 20:46:08,152 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 20:46:08,217 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 20:46:08,303 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 20:46:13,307 - src.clipboard_manager - INFO - Added clipboard entry: json (734 bytes)
+2025-07-13 20:46:13,584 - src.clipboard_manager - INFO - Added clipboard entry: json (734 bytes)
+2025-07-13 20:46:13,758 - src.clipboard_manager - INFO - Added clipboard entry: json (734 bytes)
+2025-07-13 20:46:13,814 - src.clipboard_manager - INFO - Added clipboard entry: json (734 bytes)
+2025-07-13 20:46:14,123 - src.clipboard_manager - INFO - Added clipboard entry: json (734 bytes)
+2025-07-13 20:46:14,160 - src.clipboard_manager - INFO - Added clipboard entry: json (734 bytes)
+2025-07-13 20:46:14,223 - src.clipboard_manager - INFO - Added clipboard entry: json (734 bytes)
+2025-07-13 20:46:41,777 - src.clipboard_manager - INFO - Added clipboard entry: command (10 bytes)
+2025-07-13 20:46:41,832 - src.clipboard_manager - INFO - Added clipboard entry: command (10 bytes)
+2025-07-13 20:46:42,141 - src.clipboard_manager - INFO - Added clipboard entry: command (10 bytes)
+2025-07-13 20:46:42,176 - src.clipboard_manager - INFO - Added clipboard entry: command (10 bytes)
+2025-07-13 20:46:42,240 - src.clipboard_manager - INFO - Added clipboard entry: command (10 bytes)
+2025-07-13 20:46:42,325 - src.clipboard_manager - INFO - Added clipboard entry: command (10 bytes)
+2025-07-13 20:46:42,608 - src.clipboard_manager - INFO - Added clipboard entry: command (10 bytes)
+2025-07-13 20:46:46,423 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:47:20,780 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:47:28,713 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:47:45,641 - src.clipboard_manager - INFO - Added clipboard entry: text (113 bytes)
+2025-07-13 20:47:45,809 - src.clipboard_manager - INFO - Added clipboard entry: text (113 bytes)
+2025-07-13 20:47:45,863 - src.clipboard_manager - INFO - Added clipboard entry: text (113 bytes)
+2025-07-13 20:47:46,181 - src.clipboard_manager - INFO - Added clipboard entry: text (113 bytes)
+2025-07-13 20:47:46,207 - src.clipboard_manager - INFO - Added clipboard entry: text (113 bytes)
+2025-07-13 20:47:46,275 - src.clipboard_manager - INFO - Added clipboard entry: text (113 bytes)
+2025-07-13 20:47:46,356 - src.clipboard_manager - INFO - Added clipboard entry: text (113 bytes)
+2025-07-13 21:10:33,943 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 21:10:34,022 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 21:10:34,045 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 21:10:34,046 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 21:10:34,049 - src.clipboard_manager - INFO - Loaded 22 clipboard entries
+2025-07-13 21:10:34,050 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 21:10:34,050 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 21:10:34,734 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 21:10:34,736 - src.audio_recorder - INFO - Loaded 5 audio recordings
+2025-07-13 21:10:34,736 - __main__ - INFO - Audio recorder initialized
+2025-07-13 21:10:34,736 - __main__ - INFO - Background processor initialized
+2025-07-13 21:10:34,763 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 21:10:34,847 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 21:10:34,855 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 21:10:37,447 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 21:10:37,448 - __main__ - INFO - UI initialized
+2025-07-13 21:10:37,448 - __main__ - INFO - Starting background services...
+2025-07-13 21:10:37,449 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 21:10:37,450 - src.background_processor - INFO - Background processor started
+2025-07-13 21:10:37,450 - __main__ - INFO - All services started successfully
+2025-07-13 21:10:37,451 - __main__ - INFO - Starting UI...
+2025-07-13 21:12:45,307 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:12:45,495 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:12:45,510 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:12:45,549 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:12:45,855 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:12:45,877 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:12:45,940 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:12:46,024 - src.clipboard_manager - INFO - Added clipboard entry: command (626 bytes)
+2025-07-13 21:13:00,865 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:00,888 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:00,951 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:01,033 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:01,317 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:01,506 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:01,519 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:01,561 - src.clipboard_manager - INFO - Added clipboard entry: command (95 bytes)
+2025-07-13 21:13:06,511 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:13:06,523 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:13:06,564 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:13:06,869 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:13:06,895 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:13:06,960 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:13:07,039 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:13:07,322 - src.clipboard_manager - INFO - Added clipboard entry: command (725 bytes)
+2025-07-13 21:15:59,874 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 21:16:15,180 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 21:20:21,983 - __main__ - INFO - Received signal 2, shutting down...
+2025-07-13 21:20:21,985 - __main__ - INFO - Shutting down Edge-QLM...
+2025-07-13 21:20:26,073 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,104 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,157 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,234 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,527 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,715 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,727 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,772 - src.clipboard_manager - INFO - Added clipboard entry: json (25 bytes)
+2025-07-13 21:20:26,997 - src.background_processor - INFO - Background processor stopped
+2025-07-13 21:20:27,729 - src.clipboard_manager - INFO - Clipboard monitoring stopped
+2025-07-13 21:20:27,729 - __main__ - INFO - Shutdown complete
+2025-07-13 21:20:34,808 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 21:20:51,430 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 21:20:53,642 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 21:20:53,708 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 21:20:53,731 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 21:20:53,732 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 21:20:53,747 - src.clipboard_manager - INFO - Loaded 26 clipboard entries
+2025-07-13 21:20:53,747 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 21:20:53,747 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 21:20:54,332 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 21:20:54,333 - src.audio_recorder - INFO - Loaded 5 audio recordings
+2025-07-13 21:20:54,333 - __main__ - INFO - Audio recorder initialized
+2025-07-13 21:20:54,333 - __main__ - INFO - Background processor initialized
+2025-07-13 21:20:54,363 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 21:20:54,449 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 21:20:54,457 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 21:20:56,890 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 21:20:56,891 - __main__ - INFO - UI initialized
+2025-07-13 21:20:56,891 - __main__ - INFO - Starting background services...
+2025-07-13 21:20:56,891 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 21:20:56,892 - src.background_processor - INFO - Background processor started
+2025-07-13 21:20:56,892 - __main__ - INFO - All services started successfully
+2025-07-13 21:20:56,892 - __main__ - INFO - Starting UI...
