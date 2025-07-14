@@ -383,6 +383,10 @@ class SimpleEdgeQLMWindow(QMainWindow):
         self.status_timer = QTimer()
         self.status_timer.timeout.connect(self.update_status)
         self.status_timer.start(5000)  # Every 5 seconds
+        
+        # Initial updates
+        self.update_clipboard_display()
+        self.update_recordings_list()
     
     def apply_clean_theme(self):
         """Apply clean dark theme"""
@@ -636,6 +640,13 @@ class SimpleEdgeQLMWindow(QMainWindow):
     def transcribe_last_recording(self):
         """Transcribe last recording"""
         try:
+            # Update status to show we're processing
+            self.recording_status.setText("Transcribing...")
+            self.recording_status.setStyleSheet("font-weight: bold; font-size: 16px; color: #ffaa00;")
+            
+            # Force UI update
+            QApplication.processEvents()
+            
             if hasattr(self.audio_recorder, 'transcribe_last_recording'):
                 result = self.audio_recorder.transcribe_last_recording()
                 if result:
@@ -643,14 +654,18 @@ class SimpleEdgeQLMWindow(QMainWindow):
                     self.recording_status.setText("Ready")
                     self.recording_status.setStyleSheet("font-weight: bold; font-size: 16px; color: #00aa00;")
                     
-                    # Update recordings list
+                    # Update recordings list to show new status
                     self.update_recordings_list()
                 else:
                     self.transcription_output.setText("Transcription failed or no recording found.")
+                    self.recording_status.setText("Error")
+                    self.recording_status.setStyleSheet("font-weight: bold; font-size: 16px; color: #ff4444;")
                     
         except Exception as e:
             self.logger.error(f"Error transcribing: {e}")
             self.transcription_output.setText(f"Error: {str(e)}")
+            self.recording_status.setText("Error")
+            self.recording_status.setStyleSheet("font-weight: bold; font-size: 16px; color: #ff4444;")
     
     def update_recordings_list(self):
         self.recordings_list.clear()

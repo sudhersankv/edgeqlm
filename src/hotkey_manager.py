@@ -23,6 +23,8 @@ class HotkeyManager:
         self.listeners = []
         self.ptt_active = False
         self.ptt_thread = None
+        self.last_trigger_time = {}  # For debounce
+        self.debounce_delay = 0.5  # seconds
         
         # Initialize default hotkeys
         self.setup_default_hotkeys()
@@ -118,6 +120,13 @@ class HotkeyManager:
         try:
             key_str = self.key_to_string(key)
             
+            # Debounce check
+            current_time = time.time()
+            if key_str in self.last_trigger_time:
+                if current_time - self.last_trigger_time[key_str] < self.debounce_delay:
+                    return
+            self.last_trigger_time[key_str] = current_time
+            
             # Check if this is a registered hotkey
             for hotkey_str, hotkey_config in self.hotkeys.items():
                 if key_str.lower() == hotkey_str.lower():
@@ -134,6 +143,13 @@ class HotkeyManager:
         """Handle key release events"""
         try:
             key_str = self.key_to_string(key)
+            
+            # Debounce check (optional for release, but adding for consistency)
+            current_time = time.time()
+            if key_str in self.last_trigger_time:
+                if current_time - self.last_trigger_time[key_str] < self.debounce_delay:
+                    return
+            self.last_trigger_time[key_str] = current_time
             
             # Check if this is a registered hotkey
             for hotkey_str, hotkey_config in self.hotkeys.items():

@@ -127,3 +127,282 @@
 2025-07-13 20:00:13,421 - src.clipboard_manager - INFO - Added clipboard entry: text (19 bytes)
 2025-07-13 20:00:13,720 - src.clipboard_manager - INFO - Added clipboard entry: text (19 bytes)
 2025-07-13 20:00:13,747 - src.clipboard_manager - INFO - Added clipboard entry: text (19 bytes)
+2025-07-13 20:04:04,623 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:04:57,334 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:05:00,401 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:05:00,467 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 20:05:00,493 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 20:05:00,493 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 20:05:00,593 - src.clipboard_manager - INFO - Loaded 10 clipboard entries
+2025-07-13 20:05:00,594 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 20:05:00,594 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:05:01,232 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:05:01,233 - src.audio_recorder - INFO - Loaded 1 audio recordings
+2025-07-13 20:05:01,233 - __main__ - INFO - Audio recorder initialized
+2025-07-13 20:05:01,233 - __main__ - INFO - Background processor initialized
+2025-07-13 20:05:01,267 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 20:05:01,365 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 20:05:01,373 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 20:05:05,525 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 20:05:05,525 - __main__ - INFO - UI initialized
+2025-07-13 20:05:05,525 - __main__ - INFO - Starting background services...
+2025-07-13 20:05:05,526 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 20:05:05,526 - src.background_processor - INFO - Background processor started
+2025-07-13 20:05:05,526 - __main__ - INFO - All services started successfully
+2025-07-13 20:05:05,527 - __main__ - INFO - Starting UI...
+2025-07-13 20:05:15,733 - src.audio_recorder - INFO - Started recording: recording_20250713_200515.wav
+2025-07-13 20:05:19,469 - src.audio_recorder - INFO - Stopped recording: recording_20250713_200515.wav (116.04 KB, 3.7s)
+2025-07-13 20:05:20,473 - src.audio_recorder - INFO - Transcribing recording_20250713_200515.wav with OpenAI Whisper
+2025-07-13 20:05:20,488 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:05:23,649 - src.audio_recorder - INFO - Transcribing recording_20250713_200515.wav with OpenAI Whisper
+2025-07-13 20:05:23,663 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:05:30,964 - src.audio_recorder - INFO - Started recording: recording_20250713_200530.wav
+2025-07-13 20:05:34,182 - src.audio_recorder - INFO - Stopped recording: recording_20250713_200530.wav (100.04 KB, 3.2s)
+2025-07-13 20:05:35,185 - src.audio_recorder - INFO - Transcribing recording_20250713_200530.wav with OpenAI Whisper
+2025-07-13 20:05:35,201 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:05:43,544 - src.clipboard_manager - INFO - Added clipboard entry: code (3084 bytes)
+2025-07-13 20:05:43,581 - src.clipboard_manager - INFO - Added clipboard entry: code (3084 bytes)
+2025-07-13 20:05:43,878 - src.clipboard_manager - INFO - Added clipboard entry: code (3084 bytes)
+2025-07-13 20:05:43,903 - src.clipboard_manager - INFO - Added clipboard entry: code (3084 bytes)
+2025-07-13 20:06:11,235 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:06:29,569 - src.clipboard_manager - INFO - Added clipboard entry: json (6408 bytes)
+2025-07-13 20:06:29,606 - src.clipboard_manager - INFO - Added clipboard entry: json (6408 bytes)
+2025-07-13 20:06:29,902 - src.clipboard_manager - INFO - Added clipboard entry: json (6408 bytes)
+2025-07-13 20:06:29,931 - src.clipboard_manager - INFO - Added clipboard entry: json (6408 bytes)
+2025-07-13 20:09:23,994 - src.clipboard_manager - INFO - Added clipboard entry: code (3245 bytes)
+2025-07-13 20:09:24,027 - src.clipboard_manager - INFO - Added clipboard entry: code (3245 bytes)
+2025-07-13 20:09:24,650 - src.clipboard_manager - INFO - Added clipboard entry: code (3245 bytes)
+2025-07-13 20:09:24,691 - src.clipboard_manager - INFO - Added clipboard entry: code (3245 bytes)
+2025-07-13 20:10:59,698 - src.clipboard_manager - INFO - Added clipboard entry: code (1500 bytes)
+2025-07-13 20:10:59,738 - src.clipboard_manager - INFO - Added clipboard entry: code (1500 bytes)
+2025-07-13 20:11:00,040 - src.clipboard_manager - INFO - Added clipboard entry: code (1500 bytes)
+2025-07-13 20:11:00,076 - src.clipboard_manager - INFO - Added clipboard entry: code (1500 bytes)
+2025-07-13 20:11:37,716 - src.clipboard_manager - INFO - Added clipboard entry: error (838 bytes)
+2025-07-13 20:11:37,758 - src.clipboard_manager - INFO - Added clipboard entry: error (838 bytes)
+2025-07-13 20:11:38,060 - src.clipboard_manager - INFO - Added clipboard entry: error (838 bytes)
+2025-07-13 20:11:38,102 - src.clipboard_manager - INFO - Added clipboard entry: error (838 bytes)
+2025-07-13 20:13:05,020 - src.audio_recorder - INFO - Started recording: recording_20250713_201304.wav
+2025-07-13 20:13:07,159 - src.audio_recorder - INFO - Stopped recording: recording_20250713_201304.wav (66.04 KB, 2.1s)
+2025-07-13 20:13:08,162 - src.audio_recorder - INFO - Transcribing recording_20250713_201304.wav with OpenAI Whisper
+2025-07-13 20:13:08,174 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:13:16,093 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:13:18,737 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:13:18,862 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 20:13:18,884 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 20:13:18,885 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 20:13:18,887 - src.clipboard_manager - INFO - Loaded 15 clipboard entries
+2025-07-13 20:13:18,888 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 20:13:18,888 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:13:19,471 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:13:19,482 - src.audio_recorder - INFO - Loaded 4 audio recordings
+2025-07-13 20:13:19,483 - __main__ - INFO - Audio recorder initialized
+2025-07-13 20:13:19,483 - __main__ - INFO - Background processor initialized
+2025-07-13 20:13:19,514 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 20:13:19,675 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 20:13:19,681 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 20:13:24,237 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 20:13:24,238 - __main__ - INFO - UI initialized
+2025-07-13 20:13:24,238 - __main__ - INFO - Starting background services...
+2025-07-13 20:13:24,238 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 20:13:24,239 - src.background_processor - INFO - Background processor started
+2025-07-13 20:13:24,239 - __main__ - INFO - All services started successfully
+2025-07-13 20:13:24,239 - __main__ - INFO - Starting UI...
+2025-07-13 20:13:27,743 - src.audio_recorder - INFO - Started recording: recording_20250713_201327.wav
+2025-07-13 20:13:30,961 - src.audio_recorder - INFO - Stopped recording: recording_20250713_201327.wav (100.04 KB, 3.2s)
+2025-07-13 20:13:31,963 - src.audio_recorder - INFO - Transcribing recording_20250713_201327.wav with OpenAI Whisper
+2025-07-13 20:13:31,976 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:13:34,486 - src.audio_recorder - INFO - Transcribing recording_20250713_201327.wav with OpenAI Whisper
+2025-07-13 20:13:34,498 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:13:43,163 - src.clipboard_manager - INFO - Added clipboard entry: code (11737 bytes)
+2025-07-13 20:13:43,246 - src.clipboard_manager - INFO - Added clipboard entry: code (11737 bytes)
+2025-07-13 20:13:43,782 - src.clipboard_manager - INFO - Added clipboard entry: code (11737 bytes)
+2025-07-13 20:13:43,822 - src.clipboard_manager - INFO - Added clipboard entry: code (11737 bytes)
+2025-07-13 20:13:44,123 - src.clipboard_manager - INFO - Added clipboard entry: code (11737 bytes)
+2025-07-13 20:14:15,238 - src.audio_recorder - INFO - Started recording: recording_20250713_201415.wav
+2025-07-13 20:14:17,055 - src.audio_recorder - INFO - Stopped recording: recording_20250713_201415.wav (56.04 KB, 1.8s)
+2025-07-13 20:14:18,057 - src.audio_recorder - INFO - Transcribing recording_20250713_201415.wav with OpenAI Whisper
+2025-07-13 20:14:18,069 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:14:23,311 - src.audio_recorder - INFO - Deleted audio file: recording_20250713_194548.wav
+2025-07-13 20:14:23,311 - src.audio_recorder - INFO - Deleted audio file: recording_20250713_200515.wav
+2025-07-13 20:14:23,313 - src.audio_recorder - INFO - Deleted audio file: recording_20250713_200530.wav
+2025-07-13 20:14:23,313 - src.audio_recorder - INFO - Deleted audio file: recording_20250713_201304.wav
+2025-07-13 20:14:23,313 - src.audio_recorder - INFO - Deleted audio file: recording_20250713_201327.wav
+2025-07-13 20:14:23,313 - src.audio_recorder - INFO - Deleted audio file: recording_20250713_201415.wav
+2025-07-13 20:14:23,313 - src.audio_recorder - INFO - All recordings cleared
+2025-07-13 20:14:24,214 - src.audio_recorder - INFO - Started recording: recording_20250713_201424.wav
+2025-07-13 20:14:25,966 - src.audio_recorder - INFO - Stopped recording: recording_20250713_201424.wav (54.04 KB, 1.7s)
+2025-07-13 20:14:26,968 - src.audio_recorder - INFO - Transcribing recording_20250713_201424.wav with OpenAI Whisper
+2025-07-13 20:14:26,979 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:15:25,174 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:15:25,174 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:15:25,851 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:15:25,863 - src.audio_recorder - INFO - Loaded 1 audio recordings
+2025-07-13 20:15:34,074 - src.audio_recorder - INFO - Started recording: recording_20250713_201533.wav
+2025-07-13 20:15:35,251 - src.audio_recorder - INFO - Stopped recording: recording_20250713_201533.wav (36.04 KB, 1.2s)
+2025-07-13 20:15:36,253 - src.audio_recorder - INFO - Transcribing recording_20250713_201533.wav with OpenAI Whisper
+2025-07-13 20:15:36,267 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:15:37,526 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:15:37,528 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:15:38,233 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:15:38,243 - src.audio_recorder - INFO - Loaded 2 audio recordings
+2025-07-13 20:15:38,243 - src.audio_recorder - INFO - Transcribing recording_20250713_201424.wav with OpenAI Whisper
+2025-07-13 20:15:38,244 - src.audio_recorder - INFO - File path: D:\edge-qlm\data\audio\recording_20250713_201424.wav
+2025-07-13 20:15:38,244 - src.audio_recorder - INFO - File size: 55340 bytes
+2025-07-13 20:15:38,264 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:15:38,264 - src.audio_recorder - ERROR - Audio file: D:\edge-qlm\data\audio\recording_20250713_201424.wav
+2025-07-13 20:15:38,265 - src.audio_recorder - ERROR - Working directory: D:\edge-qlm
+2025-07-13 20:15:45,813 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:15:48,824 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:15:48,982 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 20:15:49,005 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 20:15:49,005 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 20:15:49,009 - src.clipboard_manager - INFO - Loaded 16 clipboard entries
+2025-07-13 20:15:49,009 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 20:15:49,009 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:15:49,561 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:15:49,573 - src.audio_recorder - INFO - Loaded 2 audio recordings
+2025-07-13 20:15:49,574 - __main__ - INFO - Audio recorder initialized
+2025-07-13 20:15:49,574 - __main__ - INFO - Background processor initialized
+2025-07-13 20:15:49,625 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 20:15:49,769 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 20:15:49,776 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 20:15:54,401 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 20:15:54,401 - __main__ - INFO - UI initialized
+2025-07-13 20:15:54,401 - __main__ - INFO - Starting background services...
+2025-07-13 20:15:54,402 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 20:15:54,403 - src.background_processor - INFO - Background processor started
+2025-07-13 20:15:54,403 - __main__ - INFO - All services started successfully
+2025-07-13 20:15:54,403 - __main__ - INFO - Starting UI...
+2025-07-13 20:15:56,537 - src.audio_recorder - INFO - Started recording: recording_20250713_201556.wav
+2025-07-13 20:15:59,632 - src.audio_recorder - INFO - Stopped recording: recording_20250713_201556.wav (96.04 KB, 3.1s)
+2025-07-13 20:16:00,636 - src.audio_recorder - INFO - Transcribing recording_20250713_201556.wav with OpenAI Whisper
+2025-07-13 20:16:00,636 - src.audio_recorder - INFO - File path: D:\edge-qlm\data\audio\recording_20250713_201556.wav
+2025-07-13 20:16:00,636 - src.audio_recorder - INFO - File size: 98348 bytes
+2025-07-13 20:16:00,649 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified
+2025-07-13 20:16:00,649 - src.audio_recorder - ERROR - Audio file: D:\edge-qlm\data\audio\recording_20250713_201556.wav
+2025-07-13 20:16:00,651 - src.audio_recorder - ERROR - Working directory: D:\edge-qlm
+2025-07-13 20:16:30,868 - src.clipboard_manager - INFO - Added clipboard entry: code (3344 bytes)
+2025-07-13 20:16:30,910 - src.clipboard_manager - INFO - Added clipboard entry: code (3344 bytes)
+2025-07-13 20:16:31,207 - src.clipboard_manager - INFO - Added clipboard entry: code (3344 bytes)
+2025-07-13 20:16:31,250 - src.clipboard_manager - INFO - Added clipboard entry: code (3344 bytes)
+2025-07-13 20:16:31,329 - src.clipboard_manager - INFO - Added clipboard entry: code (3344 bytes)
+2025-07-13 20:16:31,421 - src.clipboard_manager - INFO - Added clipboard entry: code (3344 bytes)
+2025-07-13 20:16:35,796 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,310 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,342 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,373 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,404 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,435 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,466 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,496 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,528 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,573 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,604 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,635 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,667 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,697 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,728 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,759 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,807 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,837 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,868 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,898 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,931 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:36,962 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,262 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,773 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,805 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,834 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,865 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,895 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,942 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:40,973 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,003 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,034 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,064 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,094 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,126 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,173 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,204 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,234 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,265 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,296 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,327 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,358 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,403 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,435 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,467 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,498 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,528 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,560 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,591 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,624 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,654 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,701 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,732 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,763 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,794 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,826 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,856 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,887 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:41,932 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 20:16:49,878 - src.clipboard_manager - INFO - Added clipboard entry: code (6001 bytes)
+2025-07-13 20:16:49,923 - src.clipboard_manager - INFO - Added clipboard entry: code (6001 bytes)
+2025-07-13 20:16:50,220 - src.clipboard_manager - INFO - Added clipboard entry: code (6001 bytes)
+2025-07-13 20:16:50,265 - src.clipboard_manager - INFO - Added clipboard entry: code (6001 bytes)
+2025-07-13 20:16:50,340 - src.clipboard_manager - INFO - Added clipboard entry: code (6001 bytes)
+2025-07-13 20:16:50,434 - src.clipboard_manager - INFO - Added clipboard entry: code (6001 bytes)
+2025-07-13 20:26:03,635 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:26:03,636 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:26:04,225 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:26:04,225 - src.audio_recorder - INFO - Loaded 3 audio recordings
+2025-07-13 20:26:04,227 - src.audio_recorder - INFO - Transcribing recording_20250713_201556.wav with OpenAI Whisper
+2025-07-13 20:26:04,227 - src.audio_recorder - INFO - File path: D:\edge-qlm\data\audio\recording_20250713_201556.wav
+2025-07-13 20:26:04,227 - src.audio_recorder - INFO - File size: 98348 bytes
+2025-07-13 20:26:06,184 - src.audio_recorder - INFO - Transcription successful: 39 characters
+2025-07-13 20:26:06,186 - src.audio_recorder - INFO - Transcribed recording: recording_20250713_201556.wav
+2025-07-13 20:26:13,750 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:26:13,751 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:26:14,366 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:26:14,387 - src.audio_recorder - INFO - Loaded 3 audio recordings
+2025-07-13 20:26:14,389 - src.audio_recorder - INFO - Transcribing recording_20250713_201556.wav with OpenAI Whisper
+2025-07-13 20:26:14,389 - src.audio_recorder - INFO - File path: D:\edge-qlm\data\audio\recording_20250713_201556.wav
+2025-07-13 20:26:14,389 - src.audio_recorder - INFO - File size: 98348 bytes
+2025-07-13 20:26:16,001 - src.audio_recorder - INFO - Transcription successful: 39 characters
+2025-07-13 20:26:16,003 - src.audio_recorder - INFO - Transcribed recording: recording_20250713_201556.wav
+2025-07-13 20:29:01,826 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:29:04,435 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 20:29:04,545 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 20:29:04,576 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 20:29:04,577 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 20:29:04,581 - src.clipboard_manager - INFO - Loaded 18 clipboard entries
+2025-07-13 20:29:04,583 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 20:29:04,583 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 20:29:05,248 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 20:29:05,249 - src.audio_recorder - INFO - Loaded 3 audio recordings
+2025-07-13 20:29:05,249 - __main__ - INFO - Audio recorder initialized
+2025-07-13 20:29:05,250 - __main__ - INFO - Background processor initialized
+2025-07-13 20:29:05,278 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 20:29:05,491 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 20:29:05,506 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 20:29:10,099 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 20:29:10,100 - __main__ - INFO - UI initialized
+2025-07-13 20:29:10,100 - __main__ - INFO - Starting background services...
+2025-07-13 20:29:10,101 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 20:29:10,101 - src.background_processor - INFO - Background processor started
+2025-07-13 20:29:10,101 - __main__ - INFO - All services started successfully
+2025-07-13 20:29:10,101 - __main__ - INFO - Starting UI...
+2025-07-13 20:29:16,217 - src.audio_recorder - INFO - Started recording: recording_20250713_202916.wav
+2025-07-13 20:29:19,437 - src.audio_recorder - INFO - Stopped recording: recording_20250713_202916.wav (100.04 KB, 3.2s)
+2025-07-13 20:29:20,439 - src.audio_recorder - INFO - Transcribing recording_20250713_202916.wav with OpenAI Whisper
+2025-07-13 20:29:20,440 - src.audio_recorder - INFO - File path: D:\edge-qlm\data\audio\recording_20250713_202916.wav
+2025-07-13 20:29:20,440 - src.audio_recorder - INFO - File size: 102444 bytes
+2025-07-13 20:29:21,531 - src.audio_recorder - INFO - Transcription successful: 44 characters
+2025-07-13 20:29:21,532 - src.audio_recorder - INFO - Transcribed recording: recording_20250713_202916.wav
+2025-07-13 20:29:29,349 - src.audio_recorder - INFO - Started recording: recording_20250713_202929.wav
+2025-07-13 20:29:36,609 - src.audio_recorder - INFO - Stopped recording: recording_20250713_202929.wav (226.04 KB, 7.2s)
+2025-07-13 20:29:37,613 - src.audio_recorder - INFO - Transcribing recording_20250713_202929.wav with OpenAI Whisper
+2025-07-13 20:29:37,614 - src.audio_recorder - INFO - File path: D:\edge-qlm\data\audio\recording_20250713_202929.wav
+2025-07-13 20:29:37,614 - src.audio_recorder - INFO - File size: 231468 bytes
+2025-07-13 20:29:39,059 - src.audio_recorder - INFO - Transcription successful: 95 characters
+2025-07-13 20:29:39,060 - src.audio_recorder - INFO - Transcribed recording: recording_20250713_202929.wav

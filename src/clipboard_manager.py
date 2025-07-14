@@ -119,6 +119,26 @@ class ClipboardManager:
             # Save to file
             self.save_entries()
             
+    def add_manual_entry(self, content: str, content_type: str = None):
+        """Manually add a clipboard entry (e.g., from transcription)"""
+        if not content.strip():
+            return
+            
+        with self.lock:
+            entry = ClipboardEntry(content)
+            if content_type:
+                entry.content_type = content_type
+            
+            self.entries.append(entry)
+            
+            logger.info(f"Added manual clipboard entry: {entry.content_type} ({entry.size} bytes)")
+            
+            # Clean up old entries if needed
+            self._cleanup_entries()
+            
+            # Save to file
+            self.save_entries()
+            
     def _cleanup_entries(self):
         """Clean up old entries if threshold exceeded"""
         if len(self.entries) > config.CLIPBOARD_CLEANUP_THRESHOLD:
@@ -186,6 +206,10 @@ class ClipboardManager:
             self.save_entries()
             logger.info("Cleared all clipboard entries")
             
+    def clear_history(self):
+        """Alias for clear_all_entries for UI compatibility"""
+        self.clear_all_entries()
+            
     def get_entries_for_processing(self, limit: int = None) -> List[ClipboardEntry]:
         """Get entries that need processing (summarization/labeling)"""
         limit = limit or config.PROCESSING_BATCH_SIZE
@@ -245,3 +269,8 @@ class ClipboardManager:
                 'oldest_entry': self.entries[0].timestamp.isoformat() if self.entries else None,
                 'newest_entry': self.entries[-1].timestamp.isoformat() if self.entries else None
             } 
+
+    @property
+    def is_running(self) -> bool:
+        """Check if clipboard monitoring is running"""
+        return self.running 

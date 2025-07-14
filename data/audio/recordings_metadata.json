@@ -1,14 +1,58 @@
 {
   "recordings": [
     {
-      "filename": "recording_20250713_194548.wav",
-      "title": "Recording_20250713_194548",
-      "timestamp": "2025-07-13T19:45:48.464001",
-      "duration": 2.176,
-      "file_size": 69676,
+      "filename": "recording_20250713_201424.wav",
+      "title": "Recording_20250713_201424",
+      "timestamp": "2025-07-13T20:14:24.090674",
+      "duration": 1.728,
+      "file_size": 55340,
       "transcription": null,
       "summary": null,
-      "status": "recorded",
+      "status": "error",
+      "error_message": "Transcription failed - no text returned"
+    },
+    {
+      "filename": "recording_20250713_201533.wav",
+      "title": "Recording_20250713_201533",
+      "timestamp": "2025-07-13T20:15:33.944479",
+      "duration": 1.152,
+      "file_size": 36908,
+      "transcription": null,
+      "summary": null,
+      "status": "error",
+      "error_message": "Transcription failed"
+    },
+    {
+      "filename": "recording_20250713_201556.wav",
+      "title": "Recording_20250713_201556",
+      "timestamp": "2025-07-13T20:15:56.349362",
+      "duration": 3.072,
+      "file_size": 98348,
+      "transcription": "Hello recording check hello hello hello",
+      "summary": null,
+      "status": "transcribed",
+      "error_message": null
+    },
+    {
+      "filename": "recording_20250713_202916.wav",
+      "title": "Recording_20250713_202916",
+      "timestamp": "2025-07-13T20:29:16.049455",
+      "duration": 3.2,
+      "file_size": 102444,
+      "transcription": "Hello, hello, check, check, mic checking 123",
+      "summary": null,
+      "status": "transcribed",
+      "error_message": null
+    },
+    {
+      "filename": "recording_20250713_202929.wav",
+      "title": "Recording_20250713_202929",
+      "timestamp": "2025-07-13T20:29:29.237377",
+      "duration": 7.232,
+      "file_size": 231468,
+      "transcription": "Hello, hello, check, check, my checking 1, 2, 3. Need a basic English, la? Hey, what's up, you?",
+      "summary": null,
+      "status": "transcribed",
       "error_message": null
     }
   ]

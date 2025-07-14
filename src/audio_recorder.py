@@ -79,6 +79,10 @@ class AudioRecording:
         recording.summary = data.get('summary')
         recording.status = data.get('status', 'recorded')
         recording.error_message = data.get('error_message')
+        
+        # Ensure file_path is properly reconstructed
+        recording.file_path = config.AUDIO_DIR / recording.filename
+        
         return recording
     
     def update_file_info(self):
@@ -284,10 +288,14 @@ class AudioRecorder:
     
     def transcribe_recording(self, recording: AudioRecording) -> bool:
         """Transcribe an audio recording using Whisper"""
+        # Ensure file_path is properly set
+        recording.file_path = config.AUDIO_DIR / recording.filename
+        
         if not recording.file_path.exists():
-            logger.error(f"Audio file not found: {recording.filename}")
+            logger.error(f"Audio file not found: {recording.file_path}")
             recording.status = "error"
-            recording.error_message = "Audio file not found"
+            recording.error_message = f"Audio file not found: {recording.file_path}"
+            self.save_recordings()
             return False
         
         try:
@@ -307,7 +315,7 @@ class AudioRecorder:
                 return True
             else:
                 recording.status = "error"
-                recording.error_message = "Transcription failed"
+                recording.error_message = "Transcription failed - no text returned"
                 self.save_recordings()
                 return False
                 
@@ -318,12 +326,45 @@ class AudioRecorder:
             self.save_recordings()
             return False
     
+    def transcribe_last_recording(self) -> Optional[str]:
+        """Transcribe the most recent recording"""
+        if not self.recordings:
+            logger.warning("No recordings available to transcribe")
+            return None
+        
+        # Get the most recent recording
+        last_recording = self.recordings[-1]
+        
+        # Transcribe it
+        success = self.transcribe_recording(last_recording)
+        
+        if success:
+            return last_recording.transcription
+        else:
+            return None
+    
     def _transcribe_with_whisper(self, audio_file: Path) -> Optional[str]:
         """Transcribe audio using Whisper"""
         try:
+            # Verify file exists and is readable
+            if not audio_file.exists():
+                logger.error(f"Audio file does not exist: {audio_file}")
+                return None
+            
+            if not audio_file.is_file():
+                logger.error(f"Path is not a file: {audio_file}")
+                return None
+                
+            # Check file size
+            if audio_file.stat().st_size == 0:
+                logger.error(f"Audio file is empty: {audio_file}")
+                return None
+            
             if self.whisper_model:
                 # Use OpenAI Whisper
                 logger.info(f"Transcribing {audio_file.name} with OpenAI Whisper")
+                logger.info(f"File path: {audio_file}")
+                logger.info(f"File size: {audio_file.stat().st_size} bytes")
                 
                 result = self.whisper_model.transcribe(
                     str(audio_file),
@@ -331,7 +372,13 @@ class AudioRecorder:
                     temperature=config.WHISPER_TEMPERATURE
                 )
                 
-                return result.get("text", "").strip()
+                transcription = result.get("text", "").strip()
+                if transcription:
+                    logger.info(f"Transcription successful: {len(transcription)} characters")
+                    return transcription
+                else:
+                    logger.warning("Transcription returned empty text")
+                    return None
                 
             elif self.faster_whisper_model:
                 # Use Faster-Whisper
@@ -363,6 +410,8 @@ class AudioRecorder:
                        
         except Exception as e:
             logger.error(f"Error in Whisper transcription: {e}")
+            logger.error(f"Audio file: {audio_file}")
+            logger.error(f"Working directory: {os.getcwd()}")
             return None
     
     def summarize_recording(self, recording: AudioRecording) -> bool:
@@ -521,3 +570,25 @@ Format the summary in a clear, structured way."""
             'whisper_available': WHISPER_AVAILABLE or FASTER_WHISPER_AVAILABLE,
             'whisper_model': config.WHISPER_MODEL
         } 
+
+    def clear_recordings(self) -> bool:
+        """Clear all recordings and delete files"""
+        try:
+            # Delete all audio files
+            for recording in self.recordings:
+                if recording.file_path.exists():
+                    recording.file_path.unlink()
+                    logger.info(f"Deleted audio file: {recording.filename}")
+            
+            # Clear the recordings list
+            self.recordings.clear()
+            
+            # Save empty metadata
+            self.save_recordings()
+            
+            logger.info("All recordings cleared")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Error clearing recordings: {e}")
+            return False 
