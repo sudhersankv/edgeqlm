@@ -156,7 +156,7 @@ def get_system_info() -> dict:
             'cpu_count': psutil.cpu_count(),
             'memory_total': psutil.virtual_memory().total,
             'memory_available': psutil.virtual_memory().available,
-            'disk_usage': psutil.disk_usage('/').percent if platform.system() != 'Windows' else psutil.disk_usage('C:').percent
+            'disk_usage': psutil.disk_usage('/').percent if platform.system() != 'Windows' else psutil.disk_usage('C:\\').percent
         }
     except Exception as e:
         return {'error': str(e)}

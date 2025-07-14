@@ -12,7 +12,7 @@ from src.utils import setup_logger, get_system_info
 from src.clipboard_manager import ClipboardManager
 from src.audio_recorder import AudioRecorder
 from src.background_processor import BackgroundProcessor
-from src.ui import ClipboardHistoryUI
+from src.ui_simple import SimpleEdgeQLMApp
 
 logger = setup_logger(__name__)
 
@@ -58,10 +58,10 @@ class EdgeQLMApp:
             logger.info("Background processor initialized")
             
             # Initialize UI
-            self.ui = ClipboardHistoryUI(
+            self.ui = SimpleEdgeQLMApp(
                 self.clipboard_manager,
                 self.audio_recorder,
-                self.background_processor
+                config
             )
             logger.info("UI initialized")
             

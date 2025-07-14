@@ -55,7 +55,7 @@ UI_MAX_DISPLAY_ENTRIES = 100
 IDLE_THRESHOLD = 300  # seconds of inactivity before considering idle
 IDLE_CHECK_INTERVAL = 60  # seconds between idle checks
 PROCESSING_BATCH_SIZE = 10  # Number of items to process at once
-CPU_THRESHOLD = 15  # CPU usage threshold (%) for auto-processing
+CPU_THRESHOLD = 30  # CPU usage threshold (%) for auto-processing
 CPU_CHECK_DURATION = 5  # seconds to average CPU usage over
 
 # Content Type Detection Patterns

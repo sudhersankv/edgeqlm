@@ -27,3 +27,78 @@
 2025-07-11 22:40:46,758 - src.command_generator - INFO - Loaded 1 command sessions
 2025-07-11 22:41:32,904 - src.command_generator - INFO - Loaded 1 command sessions
 2025-07-11 22:43:55,319 - src.command_generator - INFO - Loaded 1 command sessions
+2025-07-13 19:31:57,911 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:32:11,488 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:32:13,989 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:32:14,134 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 19:32:14,155 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 19:32:14,155 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 19:32:14,159 - src.clipboard_manager - INFO - Loaded 4 clipboard entries
+2025-07-13 19:32:14,159 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 19:32:14,159 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 19:32:14,990 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 19:32:14,991 - __main__ - INFO - Audio recorder initialized
+2025-07-13 19:32:14,991 - __main__ - INFO - Background processor initialized
+2025-07-13 19:32:15,065 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 19:32:15,162 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 19:32:15,168 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 19:32:15,237 - __main__ - ERROR - Failed to initialize components: 'SimpleEdgeQLMWindow' object has no attribute 'update_models_list'
+2025-07-13 19:32:15,241 - __main__ - ERROR - Failed to initialize components
+2025-07-13 19:32:15,241 - __main__ - ERROR - Edge-QLM MVP encountered errors
+2025-07-13 19:41:06,406 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:41:08,851 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:41:08,905 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 19:41:08,926 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 19:41:08,927 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 19:41:08,931 - src.clipboard_manager - INFO - Loaded 4 clipboard entries
+2025-07-13 19:41:08,931 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 19:41:08,931 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 19:41:09,560 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 19:41:09,560 - __main__ - INFO - Audio recorder initialized
+2025-07-13 19:41:09,560 - __main__ - INFO - Background processor initialized
+2025-07-13 19:41:09,591 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 19:41:09,767 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 19:41:09,773 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 19:41:13,879 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 19:41:13,879 - __main__ - INFO - UI initialized
+2025-07-13 19:41:13,880 - __main__ - INFO - Starting background services...
+2025-07-13 19:41:13,880 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 19:41:13,881 - src.clipboard_manager - INFO - Added clipboard entry: json (368 bytes)
+2025-07-13 19:41:13,881 - src.background_processor - INFO - Background processor started
+2025-07-13 19:41:13,881 - __main__ - INFO - All services started successfully
+2025-07-13 19:41:13,881 - __main__ - INFO - Starting UI...
+2025-07-13 19:42:47,117 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:42:51,202 - src.command_generator_improved - ERROR - Failed to connect to Ollama. Is Ollama running on {config.OLLAMA_BASE_URL}?
+2025-07-13 19:42:51,254 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 19:42:57,258 - src.clipboard_manager - INFO - Added clipboard entry: code (484 bytes)
+2025-07-13 19:44:32,709 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:44:36,810 - src.command_generator_improved - ERROR - Failed to connect to Ollama. Is Ollama running? Try starting it with 'ollama serve' in a terminal. If not installed, download from ollama.com.
+2025-07-13 19:44:37,323 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)
+2025-07-13 19:44:48,126 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:44:50,884 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:44:50,954 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 19:44:50,981 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 19:44:50,981 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 19:44:50,984 - src.clipboard_manager - INFO - Loaded 8 clipboard entries
+2025-07-13 19:44:50,984 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 19:44:50,984 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 19:44:51,642 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 19:44:51,643 - __main__ - INFO - Audio recorder initialized
+2025-07-13 19:44:51,643 - __main__ - INFO - Background processor initialized
+2025-07-13 19:44:51,677 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 19:44:51,867 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 19:44:51,875 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 19:44:56,004 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 19:44:56,004 - __main__ - INFO - UI initialized
+2025-07-13 19:44:56,004 - __main__ - INFO - Starting background services...
+2025-07-13 19:44:56,005 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 19:44:56,006 - src.background_processor - INFO - Background processor started
+2025-07-13 19:44:56,006 - __main__ - INFO - All services started successfully
+2025-07-13 19:44:56,006 - __main__ - INFO - Starting UI...
+2025-07-13 19:45:27,346 - src.clipboard_manager - INFO - Added clipboard entry: text (2 bytes)
+2025-07-13 19:45:28,021 - src.clipboard_manager - INFO - Added clipboard entry: text (2 bytes)
+2025-07-13 19:45:48,642 - src.audio_recorder - INFO - Started recording: recording_20250713_194548.wav
+2025-07-13 19:45:50,839 - src.audio_recorder - INFO - Stopped recording: recording_20250713_194548.wav (68.04 KB, 2.2s)
+2025-07-13 19:46:13,054 - src.hotkey_manager - WARNING - Audio recorder not available
+2025-07-13 19:46:14,788 - src.audio_recorder - WARNING - No recording in progress
+2025-07-13 19:46:14,790 - src.hotkey_manager - INFO - Recording stopped via hotkey

@@ -11,7 +11,7 @@ project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
 # Import and run the command generator
-from src.command_generator import main
+from src.command_generator_improved import main
 
 if __name__ == "__main__":
     main() 

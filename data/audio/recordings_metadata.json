@@ -1,0 +1,15 @@
+{
+  "recordings": [
+    {
+      "filename": "recording_20250713_194548.wav",
+      "title": "Recording_20250713_194548",
+      "timestamp": "2025-07-13T19:45:48.464001",
+      "duration": 2.176,
+      "file_size": 69676,
+      "transcription": null,
+      "summary": null,
+      "status": "recorded",
+      "error_message": null
+    }
+  ]
+}

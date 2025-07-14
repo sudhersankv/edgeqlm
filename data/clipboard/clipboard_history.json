@@ -36,5 +36,45 @@
     "summary": null,
     "labels": [],
     "size": 48
+  },
+  {
+    "content": "(base) PS D:\\edge-qlm> git fetch origin && git reset --hard origin/main\r\nAt line:1 char:18\r\n+ git fetch origin && git reset --hard origin/main\r\n+                  ~~\r\nThe token '&&' is not a valid statement separator in this version.\r\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : InvalidEndOfLine",
+    "timestamp": "2025-07-13T19:41:13.881247",
+    "content_type": "json",
+    "summary": null,
+    "labels": [],
+    "size": 368
+  },
+  {
+    "content": "# Error: Failed to generate command - check logs for details",
+    "timestamp": "2025-07-13T19:42:51.254492",
+    "content_type": "error",
+    "summary": null,
+    "labels": [],
+    "size": 60
+  },
+  {
+    "content": "(base) PS D:\\edge-qlm> qlm command for verilog test\r\n2025-07-13 19:42:47,117 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:42:51,202 - src.command_generator_improved - ERROR - Failed to connect to Ollama. Is Ollama running on {config.OLLAMA_BASE_URL}?\r\nGenerated command (copied to clipboard):\r\n$$# Error: Failed to generate command - check logs for details$$\r\n2025-07-13 19:42:51,254 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)",
+    "timestamp": "2025-07-13T19:42:57.258490",
+    "content_type": "code",
+    "summary": null,
+    "labels": [],
+    "size": 484
+  },
+  {
+    "content": "# Error: Failed to generate command - check logs for details",
+    "timestamp": "2025-07-13T19:44:37.323075",
+    "content_type": "error",
+    "summary": null,
+    "labels": [],
+    "size": 60
+  },
+  {
+    "content": "30",
+    "timestamp": "2025-07-13T19:45:28.021697",
+    "content_type": "text",
+    "summary": null,
+    "labels": [],
+    "size": 2
   }
 ]
