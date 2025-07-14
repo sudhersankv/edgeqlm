@@ -15,7 +15,7 @@ import pyaudio
 import requests
 
 import config
-from src.utils import setup_logger, sanitize_filename, format_size
+from src.utils import setup_logger, sanitize_filename, format_size, ensure_ffmpeg
 
 logger = setup_logger(__name__)
 
@@ -118,6 +118,10 @@ class AudioRecorder:
         self.faster_whisper_model = None
         self._initialize_whisper()
         
+        # Ensure ffmpeg is installed
+        if not ensure_ffmpeg():
+            logger.warning("FFmpeg is still missing. Whisper transcription may fail.")
+
         # Load existing recordings
         self.load_recordings()
     

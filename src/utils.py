@@ -7,6 +7,10 @@ from logging.handlers import RotatingFileHandler
 from typing import List, Optional
 
 import config
+import os
+import shutil
+import subprocess
+import platform
 
 
 def setup_logger(name: str) -> logging.Logger:
@@ -142,7 +146,7 @@ def get_system_info() -> dict:
     try:
         import psutil
         import platform
-        
+        system_drive = os.environ.get('SystemDrive', 'C:') + '\\'
         return {
             'platform': platform.system(),
             'platform_version': platform.version(),
@@ -151,7 +155,7 @@ def get_system_info() -> dict:
             'cpu_count': psutil.cpu_count(),
             'memory_total': psutil.virtual_memory().total,
             'memory_available': psutil.virtual_memory().available,
-            'disk_usage': psutil.disk_usage('/').percent if platform.system() != 'Windows' else psutil.disk_usage('C:\\').percent
+            'disk_usage': psutil.disk_usage('/') .percent if platform.system() != 'Windows' else psutil.disk_usage(system_drive).percent
         }
     except Exception as e:
         return {'error': str(e)}
@@ -173,3 +177,26 @@ def escape_markdown(text: str) -> str:
     for char in special_chars:
         text = text.replace(char, '\\' + char)
     return text 
+
+# ----------------- Runtime Environment Checks -----------------
+
+def ensure_ffmpeg() -> bool:
+    """Ensure ffmpeg executable is available. Attempt automatic install if missing."""
+    if shutil.which('ffmpeg'):
+        return True
+    logger = logging.getLogger(__name__)
+    logger.warning('FFmpeg not found – attempting automatic installation...')
+    try:
+        # Conda environment
+        if shutil.which('conda'):
+            subprocess.check_call(['conda', 'install', '-y', '-c', 'conda-forge', 'ffmpeg'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        # Windows with Chocolatey
+        elif platform.system() == 'Windows' and shutil.which('choco'):
+            subprocess.check_call(['choco', 'install', 'ffmpeg', '-y'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        else:
+            logger.error('Automatic FFmpeg installation not supported. Please install it manually from https://ffmpeg.org')
+            return False
+        return shutil.which('ffmpeg') is not None
+    except Exception as e:
+        logger.error(f'Automatic FFmpeg installation failed: {e}')
+        return False 

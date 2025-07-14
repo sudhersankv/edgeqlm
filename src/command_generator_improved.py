@@ -235,6 +235,19 @@ USER REQUEST: {prompt}"""
                     return None
             else:
                 return None
+        except requests.exceptions.HTTPError as http_err:
+            # Handle 500 errors (e.g., model not pulled)
+            if http_err.response is not None and http_err.response.status_code == 500:
+                txt = http_err.response.text.lower()
+                if 'model' in txt and 'not found' in txt:
+                    logger.warning(f"Model {config.OLLAMA_MODEL} not found on Ollama – pulling now...")
+                    try:
+                        subprocess.check_call(['ollama', 'pull', config.OLLAMA_MODEL])
+                        return self._call_ollama(system_prompt, user_prompt)  # retry once
+                    except Exception as e:
+                        logger.error(f"Failed to pull model: {e}")
+            logger.error(f"HTTP error from Ollama: {http_err}")
+            return None
         except Exception as e:
             logger.error(f"Error calling Ollama: {e}")
             return None

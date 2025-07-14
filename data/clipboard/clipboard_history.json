@@ -212,5 +212,29 @@
     "summary": null,
     "labels": [],
     "size": 25
+  },
+  {
+    "content": "2025-07-13 19:42:13,587 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:42:26,124 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:42:34,852 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:42:40,617 - src.command_generator_improved - ERROR - Error calling Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate\r\n2025-07-13 19:42:57,137 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:42:59,171 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:42:59,369 - __main__ - INFO - Starting Edge-QLM MVP...\r\n2025-07-13 19:42:59,377 - __main__ - INFO - System info: {'platform': 'Windows', 'platform_version': '10.0.26100', 'architecture': '64bit', 'processor': 'ARMv8 (64-bit) Family 8 Model 1 Revision 201, Qualcomm Technologies Inc', 'cpu_count': 12, 'memory_total': 33886941184, 'memory_available': 17800978432, 'disk_usage': 26.7}\r\n2025-07-13 19:42:59,377 - __main__ - INFO - Initializing Edge-QLM components...\r\n2025-07-13 19:42:59,392 - src.clipboard_manager - INFO - Loaded 26 clipboard entries\r\n2025-07-13 19:42:59,393 - __main__ - INFO - Clipboard manager initialized\r\n2025-07-13 19:42:59,393 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base\r\n2025-07-13 19:43:01,012 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully\r\n2025-07-13 19:43:01,021 - src.audio_recorder - INFO - Loaded 5 audio recordings\r\n2025-07-13 19:43:01,021 - __main__ - INFO - Audio recorder initialized\r\n2025-07-13 19:43:01,021 - __main__ - INFO - Background processor initialized\r\n2025-07-13 19:43:01,045 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False\r\n2025-07-13 19:43:01,183 - src.hotkey_manager - INFO - Hotkey monitoring stopped\r\n2025-07-13 19:43:01,195 - src.hotkey_manager - INFO - Hotkey monitoring started\r\n2025-07-13 19:43:03,589 - src.ui_simple - INFO - Simple Edge-QLM UI initialized\r\n2025-07-13 19:43:03,590 - __main__ - INFO - UI initialized\r\n2025-07-13 19:43:03,590 - __main__ - INFO - Starting background services...\r\n2025-07-13 19:43:03,592 - src.clipboard_manager - INFO - Clipboard monitoring started\r\n2025-07-13 19:43:03,593 - src.clipboard_manager - INFO - Added clipboard entry: error (60 bytes)\r\n2025-07-13 19:43:03,593 - src.background_processor - INFO - Background processor started\r\n2025-07-13 19:43:03,594 - __main__ - INFO - All services started successfully\r\n2025-07-13 19:43:03,595 - __main__ - INFO - Starting UI...\r\n2025-07-13 19:43:08,144 - src.audio_recorder - INFO - Started recording: recording_20250713_194307.wav\r\n2025-07-13 19:43:28,293 - src.audio_recorder - INFO - Stopped recording: recording_20250713_194307.wav (626.04 KB, 20.0s)\r\n2025-07-13 19:43:29,305 - src.audio_recorder - INFO - Transcribing recording_20250713_194307.wav with OpenAI Whisper\r\n2025-07-13 19:43:29,306 - src.audio_recorder - INFO - File path: C:\\Users\\HAQKATHON AUSTIN\\edgeqlm\\data\\audio\\recording_20250713_194307.wav\r\n2025-07-13 19:43:29,307 - src.audio_recorder - INFO - File size: 641068 bytes\r\n2025-07-13 19:43:29,354 - src.audio_recorder - ERROR - Error in Whisper transcription: [WinError 2] The system cannot find the file specified\r\n2025-07-13 19:43:29,355 - src.audio_recorder - ERROR - Audio file: C:\\Users\\HAQKATHON AUSTIN\\edgeqlm\\data\\audio\\recording_20250713_194307.wav\r\n2025-07-13 19:43:29,355 - src.audio_recorder - ERROR - Working directory: C:\\Users\\HAQKATHON AUSTIN\\edgeqlm\r\n2025-07-13 19:49:45,764 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:50:02,141 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:50:21,154 - src.audio_recorder - INFO - OpenAI Whisper is available\r\n2025-07-13 19:50:25,082 - src.command_generator_improved - ERROR - Error calling Ollama: 500 Server Error: Internal Server Error for url: http://localhost:11434/api/generate",
+    "timestamp": "2025-07-13T21:58:34.782099",
+    "content_type": "code",
+    "summary": null,
+    "labels": [],
+    "size": 3929
+  },
+  {
+    "content": "import os\r\n",
+    "timestamp": "2025-07-13T22:00:20.835148",
+    "content_type": "code",
+    "summary": null,
+    "labels": [],
+    "size": 11
+  },
+  {
+    "content": "Hello hello Jake Jake Jake Hello, hello, Jake Jake Mike Besting",
+    "timestamp": "2025-07-13T22:02:21.890786",
+    "content_type": "command",
+    "summary": null,
+    "labels": [],
+    "size": 63
   }
 ]

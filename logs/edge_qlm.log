@@ -522,3 +522,53 @@
 2025-07-13 21:20:56,892 - src.background_processor - INFO - Background processor started
 2025-07-13 21:20:56,892 - __main__ - INFO - All services started successfully
 2025-07-13 21:20:56,892 - __main__ - INFO - Starting UI...
+2025-07-13 21:58:34,548 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 21:58:34,723 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 21:58:34,783 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 21:58:34,898 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 21:58:35,093 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 21:58:35,112 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 21:58:35,171 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 21:58:35,251 - src.clipboard_manager - INFO - Added clipboard entry: code (3929 bytes)
+2025-07-13 22:00:20,835 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:20,952 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:21,146 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:21,170 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:21,227 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:21,304 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:21,604 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:21,775 - src.clipboard_manager - INFO - Added clipboard entry: code (11 bytes)
+2025-07-13 22:00:34,026 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 22:00:44,326 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 22:00:46,721 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 22:00:59,516 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 22:01:01,826 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 22:01:50,035 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 22:01:52,185 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 22:01:52,240 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 22:01:52,263 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 22:01:52,263 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 22:01:52,355 - src.clipboard_manager - INFO - Loaded 28 clipboard entries
+2025-07-13 22:01:52,355 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 22:01:52,356 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 22:01:52,854 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 22:01:52,856 - src.audio_recorder - INFO - Loaded 5 audio recordings
+2025-07-13 22:01:52,856 - __main__ - INFO - Audio recorder initialized
+2025-07-13 22:01:52,857 - __main__ - INFO - Background processor initialized
+2025-07-13 22:01:52,882 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 22:01:52,983 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 22:01:52,991 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 22:01:55,460 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 22:01:55,460 - __main__ - INFO - UI initialized
+2025-07-13 22:01:55,460 - __main__ - INFO - Starting background services...
+2025-07-13 22:01:55,461 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 22:01:55,461 - src.background_processor - INFO - Background processor started
+2025-07-13 22:01:55,462 - __main__ - INFO - All services started successfully
+2025-07-13 22:01:55,462 - __main__ - INFO - Starting UI...
+2025-07-13 22:02:03,885 - src.audio_recorder - INFO - Started recording: recording_20250713_220203.wav
+2025-07-13 22:02:09,024 - src.audio_recorder - INFO - Stopped recording: recording_20250713_220203.wav (160.04 KB, 5.1s)
+2025-07-13 22:02:10,026 - src.audio_recorder - INFO - Transcribing recording_20250713_220203.wav with OpenAI Whisper
+2025-07-13 22:02:10,026 - src.audio_recorder - INFO - File path: D:\edge-qlm\data\audio\recording_20250713_220203.wav
+2025-07-13 22:02:10,026 - src.audio_recorder - INFO - File size: 163884 bytes
+2025-07-13 22:02:11,191 - src.audio_recorder - INFO - Transcription successful: 63 characters
+2025-07-13 22:02:11,191 - src.audio_recorder - INFO - Transcribed recording: recording_20250713_220203.wav
