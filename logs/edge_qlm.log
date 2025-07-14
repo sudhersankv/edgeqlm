@@ -102,3 +102,28 @@
 2025-07-13 19:46:13,054 - src.hotkey_manager - WARNING - Audio recorder not available
 2025-07-13 19:46:14,788 - src.audio_recorder - WARNING - No recording in progress
 2025-07-13 19:46:14,790 - src.hotkey_manager - INFO - Recording stopped via hotkey
+2025-07-13 19:57:39,727 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:57:42,420 - src.audio_recorder - INFO - OpenAI Whisper is available
+2025-07-13 19:57:42,496 - __main__ - INFO - Starting Edge-QLM MVP...
+2025-07-13 19:57:42,523 - __main__ - INFO - System info: {'error': 'argument 1 (impossible<bad format char>)'}
+2025-07-13 19:57:42,523 - __main__ - INFO - Initializing Edge-QLM components...
+2025-07-13 19:57:42,526 - src.clipboard_manager - INFO - Loaded 9 clipboard entries
+2025-07-13 19:57:42,526 - __main__ - INFO - Clipboard manager initialized
+2025-07-13 19:57:42,526 - src.audio_recorder - INFO - Loading OpenAI Whisper model: base
+2025-07-13 19:57:43,345 - src.audio_recorder - INFO - OpenAI Whisper model loaded successfully
+2025-07-13 19:57:43,346 - src.audio_recorder - INFO - Loaded 1 audio recordings
+2025-07-13 19:57:43,346 - __main__ - INFO - Audio recorder initialized
+2025-07-13 19:57:43,346 - __main__ - INFO - Background processor initialized
+2025-07-13 19:57:43,380 - src.hotkey_manager - INFO - Hotkeys configured: Record=F9, Stop=F10, PTT=False
+2025-07-13 19:57:43,479 - src.hotkey_manager - INFO - Hotkey monitoring stopped
+2025-07-13 19:57:43,488 - src.hotkey_manager - INFO - Hotkey monitoring started
+2025-07-13 19:57:47,641 - src.ui_simple - INFO - Simple Edge-QLM UI initialized
+2025-07-13 19:57:47,641 - __main__ - INFO - UI initialized
+2025-07-13 19:57:47,642 - __main__ - INFO - Starting background services...
+2025-07-13 19:57:47,643 - src.clipboard_manager - INFO - Clipboard monitoring started
+2025-07-13 19:57:47,644 - src.background_processor - INFO - Background processor started
+2025-07-13 19:57:47,644 - __main__ - INFO - All services started successfully
+2025-07-13 19:57:47,644 - __main__ - INFO - Starting UI...
+2025-07-13 20:00:13,421 - src.clipboard_manager - INFO - Added clipboard entry: text (19 bytes)
+2025-07-13 20:00:13,720 - src.clipboard_manager - INFO - Added clipboard entry: text (19 bytes)
+2025-07-13 20:00:13,747 - src.clipboard_manager - INFO - Added clipboard entry: text (19 bytes)

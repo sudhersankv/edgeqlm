@@ -10,8 +10,12 @@ pyaudio>=0.2.11
 openai-whisper>=20231117
 # Alternative: faster-whisper>=0.10.0  # Uncomment for faster processing
 
-# UI dependencies (tkinter is built-in)
-# Note: tkinter comes with Python standard library
+# UI dependencies
+PyQt6>=6.5.0
+PyQt6-Qt6>=6.5.0
 
-# Optional dependencies for future enhancements
-# pystray>=0.19.0  # For system tray support 
+# Hotkey support
+pynput>=1.7.6
+
+# Optional dependencies
+# pystray>=0.19.0  # For enhanced system tray support 

@@ -1,337 +1,213 @@
-# Edge-QLM MVP
+# Edge-QLM - Simple & Powerful CLI Assistant
 
-A productivity tool for semiconductor and software engineers that helps manage clipboard history, generate commands, and record/transcribe audio meetings.
+A lightweight productivity tool for developers that combines clipboard management, audio recording, and AI-powered command generation in a simple, magical CLI experience.
 
-## Features
+## ✨ What Makes It Special
 
-- **Clipboard History Management**: Automatic clipboard monitoring with timestamped entries and content type detection
-- **Command Generation (qlm CLI)**: Generate bash, git, and EDA commands using local LLM with session context support
-- **Audio Recording & Transcription**: Record meetings and system audio with automatic transcription and summarization
-- **Background Processing**: Idle-time processing for summarization and content labeling
-- **Simple GUI**: Easy-to-use interface for browsing and managing clipboard history
+- **🎯 Simple CLI**: Just type `qlm "what you want"` and get executable commands
+- **🧠 Context-Aware**: Uses your PowerShell history for smarter suggestions
+- **📋 Always-On Clipboard**: Never lose anything you copy again
+- **🎤 Voice Notes**: Quick audio recording with automatic transcription
+- **⚡ Lightweight**: Modern PyQt6 GUI that stays out of your way
+- **🔒 Local AI**: Uses Ollama - your data never leaves your machine
 
-## Prerequisites
+## Quick Start
 
-- Python 3.8+
-- Ollama installed and running (for command generation)
-- A coding-focused model in Ollama (e.g., `codellama:7b`)
-- **Optional**: Whisper for audio transcription (see installation options below)
-
-### Installing Ollama
-
-1. Download and install Ollama from [ollama.ai](https://ollama.ai)
-2. Pull a coding model:
+1. **Install Ollama** (required for command generation):
    ```bash
+   # Download from https://ollama.com and install
    ollama pull codellama:7b
    ```
-3. Start Ollama (it typically runs as a service)
 
-## Installation
-
-1. Clone this repository:
+2. **Install Edge-QLM**:
    ```bash
    git clone <repository-url>
    cd edge-qlm
+   pip install -r requirements.txt
    ```
 
-2. Run the automated setup:
+3. **Start using**:
    ```bash
-   python setup.py
+   # Launch GUI
+   qlm gui
+
+   # Generate commands
+   qlm "install nodejs using winget"
+   qlm "git commit all changes with message fix bug"
+   
+   # With context (uses PowerShell history)
+   qlm -c "run tests for current project"
+   
+   # Quick actions
+   qlm r                    # Start recording
+   qlm clip-10             # Show last 10 clipboard items
    ```
-   This will:
-   - Install Python dependencies
-   - Create necessary directories
-   - Attempt to set up the global `qlm` command
-   - Validate your environment
-   - Check for Whisper installation
 
-## Audio Transcription Setup (Optional)
+## Core Features
 
-For real audio transcription (instead of placeholders), install Whisper:
+### 🤖 AI Command Generation
+- **Simple**: `qlm "create new react app"`
+- **Context-aware**: `qlm -c "commit changes"` (uses your recent commands)
+- **Windows-focused**: Optimized for PowerShell, winget, git, docker, etc.
+- **Smart output**: Commands wrapped in `$$command$$` and auto-copied
 
-### 🎯 **Option 1: Quick Install (Recommended)**
-```bash
-# Install OpenAI Whisper (original)
-pip install openai-whisper
-```
+### 📋 Clipboard Management
+- **Always running**: Saves everything you copy automatically
+- **Smart categorization**: Code, JSON, errors, logs, configs
+- **Powerful search**: Find anything you've copied, ever
+- **Large capacity**: Stores up to 10,000 entries
+- **CLI access**: `qlm clip-15` shows last 15 items in terminal
 
-### ⚡ **Option 2: Faster Performance**
-```bash
-# Install Faster-Whisper (4x faster, same accuracy)
-pip install faster-whisper
-```
+### 🎤 Audio Recording & Transcription
+- **Hotkey recording**: F9 to start, F10 to stop (configurable)
+- **CLI recording**: `qlm r` for quick voice notes
+- **Auto-transcription**: Uses Whisper locally when CPU < 30%
+- **On-demand**: Transcribe specific recordings from GUI
+- **Smart processing**: Only processes when system is idle
 
-### 🎙️ **Option 3: Interactive Installer**
-```bash
-# Use the interactive installer
-python install_whisper.py
-```
+### 🎯 Modern GUI
+- **Clean interface**: Dark theme, tabbed design
+- **Model management**: Install/switch Ollama models easily
+- **Settings**: Adjust CPU thresholds, hotkeys, etc.
+- **System tray**: Always accessible, never in your way
+- **Launch from CLI**: `qlm gui` opens the interface
 
-### Whisper Model Options
+## Installation
 
-| Model  | Size    | Speed       | Accuracy | Best For |
-|--------|---------|-------------|----------|----------|
-| tiny   | ~39 MB  | ~32x realtime | ⭐⭐☆☆☆ | Quick demos |
-| base   | ~74 MB  | ~16x realtime | ⭐⭐⭐☆☆ | **Recommended** |
-| small  | ~244 MB | ~6x realtime  | ⭐⭐⭐⭐☆ | Best balance |
-| medium | ~769 MB | ~2x realtime  | ⭐⭐⭐⭐⭐ | High accuracy |
-| large  | ~1550 MB| ~1x realtime  | ⭐⭐⭐⭐⭐ | Best accuracy |
+### Prerequisites
+- **Python 3.8+**
+- **Ollama** (for AI features)
+- **Windows 10/11** (optimized for Windows, but works on other platforms)
 
-### 🔧 CPU Auto-Processing
+### Step-by-Step Setup
 
-**Audio transcription runs automatically when CPU usage < 15%**
+1. **Install Ollama**:
+   ```bash
+   # Download from https://ollama.com
+   # After installation:
+   ollama pull codellama:7b
+   ollama serve  # Start the service
+   ```
 
-- Configure the threshold in `config.py`:
-  ```python
-  CPU_THRESHOLD = 15  # Adjust this value (5-50%)
-  ```
-- Force processing anytime via GUI Tools menu
-- Monitor CPU usage in System Status window
+2. **Clone and Install**:
+   ```bash
+   git clone <repository-url>
+   cd edge-qlm
+   pip install -r requirements.txt
+   ```
 
-## Setting Up Global `qlm` Command
-
-After installation, you can make `qlm` available globally in your shell:
-
-### 🪟 Windows (PowerShell/Command Prompt)
-
-**Option 1: Automated installer (Recommended)**
-```powershell
-PowerShell -ExecutionPolicy Bypass -File install_qlm_global.ps1
-```
-
-**Option 2: Manual WindowsApps method**
-1. Copy `qlm.bat` to your WindowsApps directory:
+3. **Optional - Global CLI**:
    ```powershell
-   copy qlm.bat "$env:USERPROFILE\AppData\Local\Microsoft\WindowsApps\"
+   # Windows PowerShell (run as administrator)
+   PowerShell -ExecutionPolicy Bypass -File install_qlm_global.ps1
    ```
 
-**Option 3: Add to PATH**
-1. Add the project directory to your Windows PATH environment variable
-2. Use `qlm.bat` directly
-
-**Option 4: PowerShell profile**
-1. Open your PowerShell profile: `notepad $PROFILE`
-2. Add this line:
-   ```powershell
-   function qlm { python "C:\path\to\edge-qlm\qlm.py" @args }
+4. **Test Installation**:
+   ```bash
+   python test_simple.py
+   qlm --test  # Test Ollama connection
    ```
 
-### 🐧 Linux/macOS
+## Usage Examples
 
-**Option 1: Symlink (Recommended)**
+### Command Generation
 ```bash
-ln -s "$(pwd)/qlm.py" ~/.local/bin/qlm
-chmod +x ~/.local/bin/qlm
-# Ensure ~/.local/bin is in your PATH
+# Development
+qlm "create dockerfile for node app"
+qlm "find all typescript files modified today"
+qlm -c "run build and deploy to staging"
+
+# Git operations
+qlm "create new branch called feature/login"
+qlm -c "merge main and push changes"
+
+# System administration
+qlm "install docker desktop using winget"
+qlm "restart windows service called MyService"
+qlm "check disk space on all drives"
+
+# File operations
+qlm "copy all json files to backup folder"
+qlm "find files larger than 100MB"
 ```
 
-**Option 2: Shell alias**
+### Quick Actions
 ```bash
-echo 'alias qlm="python /path/to/edge-qlm/qlm.py"' >> ~/.bashrc
-source ~/.bashrc
+qlm gui          # Launch GUI
+qlm r            # Start recording
+qlm clip-15      # Show last 15 clipboard items
+qlm --test       # Test Ollama connection
 ```
 
-**Option 3: Add to PATH**
+### Context-Aware Generation
 ```bash
-export PATH="/path/to/edge-qlm:$PATH"
+# The -c flag uses your recent PowerShell history for context
+qlm -c "commit these changes"           # Knows what files you've been working on
+qlm -c "run the tests"                  # Understands your project structure
+qlm -c "deploy to production"           # Uses context from recent commands
 ```
-
-## Usage
-
-### Starting the GUI Application
-
-```bash
-python main.py
-```
-
-This will start the main GUI application with:
-- Clipboard history monitoring
-- Background processing
-- Audio recording capabilities
-- System tray integration (if enabled)
-
-### Using the qlm Command Generator
-
-#### Basic Usage (No Context)
-```bash
-qlm compile verilog testbench tb_axi
-# Output: vcs -full64 -sverilog -debug_all -l compile.log tb_axi.sv
-```
-
-#### With Session Context
-```bash
-qlm -c compile verilog for chiplet2
-qlm -c run regression for uart flow with coverage
-```
-
-#### Managing Sessions
-```bash
-# List active sessions
-qlm --list-sessions
-
-# End current session
-qlm --end-session
-
-# Use specific session ID
-qlm -c --session-id my_project generate makefile
-```
-
-### Example Command Generation
-
-```bash
-# EDA Commands
-qlm compile verilog testbench tb_axi
-# Output: vcs -full64 -sverilog -debug_all -l compile.log tb_axi.sv
-
-# Git Commands
-qlm git commit all changes with message "fix timing issue"
-# Output: git add . && git commit -m "fix timing issue"
-
-# Complex workflows with context
-qlm -c run regression for uart flow with coverage analysis
-# Output: qual_regression run --flow=uart --coverage=all --log-level=debug
-
-# Bash/PowerShell commands
-qlm find all verilog files in src directory
-# Output: find src -name "*.v" -o -name "*.sv"
-
-# EDA tool commands
-qlm synthesize design with timing constraints
-# Output: dc_shell-t -f synth_script.tcl -output_log_file synth.log
-```
-
-### GUI Features
-
-**Clipboard History Tab:**
-- View all clipboard entries with timestamps
-- Search by content or filter by type (code, JSON, error, etc.)
-- Copy entries back to clipboard
-- Delete unwanted entries
-- Process entries for summarization
-
-**Audio Recording:**
-- Start/stop recording via Audio menu
-- **Automatic transcription when CPU < 15%**
-- Summarization of transcribed content
-- Automatic cleanup (keeps only last 10 recordings)
-- View recordings and details in Audio window
-
-**System Status:**
-- View clipboard and audio statistics
-- Monitor background processing status
-- **Real-time CPU usage monitoring**
-- Force processing controls
 
 ## Configuration
 
-The main configuration is in `config.py`. Key settings include:
+Edit `config.py` to customize:
 
 ```python
-# Ollama Configuration
+# Ollama Settings
 OLLAMA_BASE_URL = "http://localhost:11434"
 OLLAMA_MODEL = "codellama:7b"
 
-# Whisper Configuration
-WHISPER_MODEL = "base"  # tiny, base, small, medium, large
-WHISPER_DEVICE = "cpu"  # cpu, cuda
-WHISPER_LANGUAGE = None  # None for auto-detect, or "en", "es", etc.
-
-# Clipboard Configuration
+# Clipboard Settings
 CLIPBOARD_MAX_ENTRIES = 10000
-CLIPBOARD_MONITOR_INTERVAL = 1.0  # seconds
+CLIPBOARD_MONITOR_INTERVAL = 1.0
 
-# Audio Configuration
-AUDIO_MAX_FILES = 10
-AUDIO_SAMPLE_RATE = 16000
+# Audio Settings
+WHISPER_MODEL = "base"  # tiny, base, small, medium, large
+CPU_THRESHOLD = 30      # Auto-transcribe when CPU < 30%
 
-# Background Processing
-IDLE_THRESHOLD = 300  # seconds
-CPU_THRESHOLD = 15  # CPU usage % for auto-processing
-PROCESSING_BATCH_SIZE = 10
+# UI Settings
+UI_WINDOW_WIDTH = 1000
+UI_WINDOW_HEIGHT = 700
 ```
-
-## Data Storage
-
-The application stores data in the following directories:
-- `data/clipboard/` - Clipboard history JSON files
-- `data/audio/` - Audio recordings and metadata
-- `logs/` - Application logs
-
-## Architecture
-
-The MVP consists of several modular components:
-
-- **ClipboardManager** (`src/clipboard_manager.py`): Handles clipboard monitoring and storage
-- **CommandGenerator** (`src/command_generator.py`): Generates commands using Ollama
-- **AudioRecorder** (`src/audio_recorder.py`): Manages audio recording and Whisper transcription
-- **BackgroundProcessor** (`src/background_processor.py`): Handles CPU-aware idle-time processing
-- **UI** (`src/ui.py`): Simple tkinter-based GUI
 
 ## Troubleshooting
 
+### Ollama Connection Issues
+```bash
+# Check if Ollama is running
+qlm --test
+
+# Start Ollama service
+ollama serve
+
+# Check available models
+ollama list
+
+# Install a model
+ollama pull codellama:7b
+```
+
 ### Common Issues
+1. **"Ollama connection failed"**: Run `ollama serve` in a terminal
+2. **GUI won't start**: Install PyQt6: `pip install PyQt6`
+3. **Audio not working**: Check microphone permissions
+4. **CLI not found**: Run the global installer or use `python qlm.py`
 
-1. **`qlm` command not found**
-   - Ensure you ran the setup: `python setup.py`
-   - Try the manual installation methods above
-   - Restart your terminal/PowerShell
-   - Check that Python is in your PATH
+## Architecture
 
-2. **Audio transcription not working**
-   - Install Whisper: `pip install openai-whisper`
-   - Check model loading in logs
-   - Verify microphone permissions
-   - Try different Whisper model in config.py
+- **Lightweight**: Minimal dependencies, fast startup
+- **Modular**: Clean separation of CLI, GUI, and core features
+- **Local-first**: All AI processing happens on your machine
+- **Background-friendly**: Smart CPU usage, idle-time processing
 
-3. **CPU usage too high for auto-processing**
-   - Lower `CPU_THRESHOLD` in config.py (default: 15%)
-   - Force processing via GUI Tools menu
-   - Check System Status for CPU monitoring
+## Why Edge-QLM?
 
-4. **Ollama Connection Error**
-   - Ensure Ollama is running: `ollama serve`
-   - Check if the model is available: `ollama list`
-   - Verify the base URL in config.py
+- **🚀 Instant**: Commands generated in seconds
+- **🧠 Smart**: Context-aware suggestions
+- **🔒 Private**: Your data stays on your machine
+- **⚡ Fast**: Lightweight, responsive interface
+- **🎯 Focused**: Does a few things really well
 
-5. **Clipboard Monitoring Not Working**
-   - Check clipboard permissions
-   - Ensure PyClip is properly installed
-   - Try running with elevated permissions
-
-### Performance Tips
-
-- **CPU Threshold**: Adjust `CPU_THRESHOLD` (5-50%) based on your system
-- **Whisper Model**: Use `tiny` or `base` for faster processing, `small`+ for accuracy
-- **Processing Batch**: Reduce `PROCESSING_BATCH_SIZE` if system becomes slow
-- **Memory**: Use `faster-whisper` for lower memory usage
-
-## Development
-
-### Project Structure
-```
-edge-qlm/
-├── config.py                    # Configuration settings
-├── main.py                      # Main application entry point
-├── qlm.py                       # CLI command script
-├── qlm.bat                      # Windows batch file
-├── install_qlm_global.ps1       # PowerShell installer
-├── install_whisper.py           # Whisper installer script
-├── setup.py                     # Setup and validation script
-├── requirements.txt             # Python dependencies
-├── src/
-│   ├── __init__.py
-│   ├── clipboard_manager.py
-│   ├── command_generator.py
-│   ├── audio_recorder.py
-│   ├── background_processor.py
-│   ├── ui.py
-│   └── utils.py
-├── data/                        # Data storage (created at runtime)
-├── logs/                        # Application logs (created at runtime)
-└── README.md
-```
-
-### Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -339,33 +215,10 @@ edge-qlm/
 4. Test thoroughly
 5. Submit a pull request
 
-## Roadmap
-
-### Near-term improvements:
-- GPU acceleration for Whisper
-- Enhanced content type detection
-- Better error handling and recovery
-- System tray integration
-- Hotkey support
-
-### Future enhancements:
-- Sensitive data detection
-- Team collaboration features
-- Voice-activated commands
-- Cross-platform packaging
-- Plugin system
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For issues and questions:
-1. Check the troubleshooting section above
-2. Review the logs in the `logs/` directory
-3. Open an issue on the project repository
+MIT License - see LICENSE file for details.
 
 ---
 
-**Note**: This is an MVP (Minimum Viable Product) implementation. Audio transcription uses real Whisper when installed, with automatic CPU-aware processing. 
+**Made for developers who want their tools to just work.** 🚀 

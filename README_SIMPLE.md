@@ -1,153 +1,155 @@
 # Edge-QLM Simple
 
-> A clean, always-on engineering assistant for Windows that actually works.
+> A clean, always-on engineering assistant that actually works.
 
 ## What It Does
 
-- **Always-on Clipboard History**: Automatically saves and categorizes everything you copy
-- **Voice Recording**: Quick voice notes with automatic transcription
-- **Smart CLI**: Context-aware command generation with PowerShell history integration
-- **Clean Interface**: Simple, focused UI without bloat
+- **🤖 Smart CLI**: Type `qlm "what you want"` → get executable commands
+- **📋 Always-On Clipboard**: Saves everything you copy, searchable forever
+- **🎤 Voice Notes**: F9 to record, auto-transcription with Whisper
+- **⚡ Modern GUI**: Dark theme, system tray, model management
 
 ## Quick Start
 
-1. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
-2. **Run the Application**:
-   ```bash
-   python main.py
-   ```
+# Start Ollama (required for AI features)
+ollama serve
+ollama pull codellama:7b
 
-3. **Use the CLI**:
-   ```bash
-   # Basic usage
-   qlm install nodejs using winget
-   
-   # With context from PowerShell history
-   qlm -c git commit all changes with message bug fix
-   
-   # Test connection
-   qlm --test
-   ```
+# Launch GUI
+python main.py
+# OR
+qlm gui
+
+# Use CLI
+qlm "install nodejs using winget"
+qlm -c "commit all changes"  # Uses PowerShell history for context
+qlm r                        # Start recording
+qlm clip-10                  # Show last 10 clipboard items
+```
 
 ## Key Features
 
+### 🤖 AI Command Generation
+- **Context-aware**: Reads your PowerShell history for better commands
+- **Windows-focused**: Optimized for PowerShell, winget, git, docker
+- **Smart output**: Commands in `$$command$$` format, auto-copied
+- **Local AI**: Uses Ollama - your data stays private
+
 ### 📋 Clipboard Management
-- **Always Running**: Saves everything you copy, always
-- **Smart Search**: Find anything you've copied, ever
-- **Auto-Categorization**: Code, errors, logs, configs, etc.
-- **Large Capacity**: Stores up to 5000 clipboard entries
+- **Always running**: Saves everything automatically
+- **Smart search**: Find anything you've copied, ever
+- **Auto-categorization**: Code, errors, logs, configs, etc.
+- **Large capacity**: Stores up to 10,000 entries
+- **CLI access**: `qlm clip-N` shows entries in terminal
 
-### 🎤 Voice Recording
-- **Hotkey Recording**: F9 to start, F10 to stop
-- **Auto-Transcription**: Automatic speech-to-text
-- **Quick Notes**: Save transcriptions as clipboard entries
-- **Local Processing**: Uses Whisper locally (no cloud)
-
-### 💻 Smart CLI
-- **Context-Aware**: Reads your PowerShell history for better commands
-- **Windows-Focused**: Optimized for Windows development workflows
-- **Clean Output**: Only commands, no explanations or fluff
-- **Auto-Copy**: Generated commands automatically copied to clipboard
+### 🎤 Audio Recording
+- **Hotkey recording**: F9 to start, F10 to stop
+- **CLI recording**: `qlm r` for quick voice notes
+- **Auto-transcription**: Uses Whisper when CPU < 30%
+- **Local processing**: No cloud, no privacy concerns
 
 ### 🎯 Clean Interface
-- **Two Main Tabs**: Clipboard and Audio - that's it
-- **System Tray**: Always accessible, never in your way
-- **Dark Theme**: Easy on the eyes
-- **Responsive**: Fast and lightweight
+- **Modern PyQt6 UI**: Dark theme, responsive design
+- **Model management**: Install/switch Ollama models easily
+- **System tray**: Always accessible, never in your way
+- **Settings**: Adjust CPU thresholds, hotkeys, etc.
+
+## Installation
+
+### Prerequisites
+- **Python 3.8+**
+- **Ollama** (download from https://ollama.com)
+- **Windows 10/11** (optimized for Windows)
+
+### Setup
+1. **Install Ollama and model**:
+   ```bash
+   ollama pull codellama:7b
+   ollama serve
+   ```
+
+2. **Install Edge-QLM**:
+   ```bash
+   git clone <repository>
+   cd edge-qlm
+   pip install -r requirements.txt
+   ```
+
+3. **Test**:
+   ```bash
+   python test_simple.py
+   qlm --test
+   ```
 
 ## Configuration
 
-Edit `config.py` to customize:
+Edit `config.py`:
 
 ```python
 # Clipboard settings
-MAX_CLIPBOARD_ENTRIES = 5000  # How many entries to keep
-CLIPBOARD_CHECK_INTERVAL = 1  # How often to check (seconds)
+CLIPBOARD_MAX_ENTRIES = 10000
+CLIPBOARD_MONITOR_INTERVAL = 1.0
 
 # Audio settings
-RECORD_HOTKEY = "F9"  # Key to start recording
-STOP_HOTKEY = "F10"   # Key to stop recording
-WHISPER_MODEL = "base"  # Whisper model size
+WHISPER_MODEL = "base"  # tiny, base, small, medium
+CPU_THRESHOLD = 30      # Auto-transcribe when CPU < 30%
 
-# CLI settings
-CLI_CONTEXT_CHARS = 1000  # PowerShell history chars to use
-CLI_AUTO_COPY = True      # Auto-copy generated commands
-```
-
-## Why This Version?
-
-The original Edge-QLM became too complex. This simplified version:
-
-- ❌ Removes unnecessary complexity
-- ❌ Removes background processing overhead  
-- ❌ Removes command generation from UI
-- ✅ Focuses on core functionality
-- ✅ Always-on clipboard monitoring
-- ✅ Better CLI with PowerShell integration
-- ✅ Reliable, simple, fast
-
-## Requirements
-
-- **Windows 10/11**: Optimized for Windows development
-- **Python 3.8+**: Modern Python required
-- **Ollama**: For CLI command generation
-- **PowerShell**: For context-aware commands
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Import Errors**: Run `python test_simple.py` to check setup
-2. **Audio Issues**: Check microphone permissions
-3. **CLI Not Working**: Ensure Ollama is running (`qlm --test`)
-4. **Clipboard Not Saving**: Check write permissions in data folder
-
-### Test Your Installation
-
-```bash
-python test_simple.py
+# Ollama settings
+OLLAMA_MODEL = "codellama:7b"
+OLLAMA_BASE_URL = "http://localhost:11434"
 ```
 
 ## CLI Examples
 
 ```bash
-# Development tasks
-qlm create new react app called myapp
-qlm -c run tests for current project
-qlm find all typescript files modified today
+# Development
+qlm "create new react app called myapp"
+qlm "find all typescript files modified today"
+qlm -c "run tests for current project"
 
 # Git operations
-qlm -c add all changes and commit with message "fix bug"
-qlm create new branch called feature/login
-qlm merge main into current branch
+qlm "create new branch called feature/login"
+qlm -c "add all changes and commit with message bug fix"
 
 # System administration
-qlm install docker desktop using winget
-qlm check disk space on C drive
-qlm restart windows service called "MyService"
+qlm "install docker desktop using winget"
+qlm "check disk space on C drive"
+qlm "restart windows service MyService"
 
-# File operations
-qlm copy all json files to backup folder
-qlm find files larger than 100MB in current directory
-qlm compress folder called "old_projects" to zip
+# Quick actions
+qlm gui          # Launch GUI
+qlm r            # Start recording
+qlm clip-15      # Show last 15 clipboard items
+qlm --test       # Test Ollama connection
 ```
 
-## Philosophy
+## Why This Version?
 
-> "I want a brilliantly executed simple tool, not a simply executed brilliant tool"
+- ✅ **Simple**: Does a few things really well
+- ✅ **Fast**: Lightweight, responsive
+- ✅ **Smart**: Context-aware command generation
+- ✅ **Private**: All processing happens locally
+- ✅ **Reliable**: Modern PyQt6 interface, stable core
 
-This version prioritizes:
-- **Reliability** over features
-- **Simplicity** over complexity  
-- **Performance** over polish
-- **Usability** over configurability
+## Troubleshooting
 
-Built for engineers who want tools that work, not toys that impress.
+### Common Issues
+1. **"Ollama connection failed"**: Run `ollama serve`
+2. **GUI won't start**: Install PyQt6: `pip install PyQt6`
+3. **Audio not working**: Check microphone permissions
+4. **CLI not found**: Use `python qlm.py` or run installer
+
+### Test Commands
+```bash
+python test_simple.py    # Test all imports
+qlm --test              # Test Ollama connection
+python main.py          # Launch GUI
+```
 
 ---
 
-*Clean. Simple. Always working.* 
+**Built for developers who want their tools to just work.** 🚀 
